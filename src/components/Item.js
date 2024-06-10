@@ -11,12 +11,13 @@ function Item({ name, category }) {
 
   const btnText = inCart ? "Remove From Cart" : "Add to Cart"
   const checkCart = inCart ? "in-cart" : ""
+  const btnStyle = inCart ? "remove" : "add"
 
   return (
     <li className={checkCart}>
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button onClick={updateCart} className="add">{btnText}</button>
+      <button onClick={updateCart} className={btnStyle}>{btnText}</button>
     </li>
   );
 }
